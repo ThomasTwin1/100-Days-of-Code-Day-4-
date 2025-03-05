@@ -1,0 +1,42 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+rock_paper_scissors = [rock, paper, scissors]
+computer_choice = random.choice(rock_paper_scissors)
+
+
+print("Greetings welcome to the Rock, Paper, Scissors Challenge. Your goal is to beat me one time in this game\n Let's begin!")
+user_input = input("type rock, paper or scissors")
+if user_input == rock.lower():
+    if computer_choice == rock:
+        print("draw")
+    elif computer_choice == paper:
+        print("You lose")
+    elif computer_choice == scissors:
+        print("You win")
+    else:
+        print("Invalid response")
